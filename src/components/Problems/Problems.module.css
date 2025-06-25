@@ -1,0 +1,82 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    color: #0014c6;
+}
+
+.title {
+    font-weight: 400;
+    font-family: var(--font-bebas, sans-serif);
+    background: linear-gradient(90deg, #2B79FF 0%, #0014C6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 60px;
+    font-size: 128px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.grid {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 80px 110px;
+    text-align: left;
+}
+
+.card {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.iconWrapper {
+    min-width: 85px;
+    height: 85px;
+    position: relative;
+}
+
+.cardTitle {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 10, 96, 1);
+}
+
+.cardDescription {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 10, 96, 1);
+}
+
+.iconWrapper {
+    position: relative;
+    min-width: 85px;
+    height: 85px;
+}
+
+.iconWrapper::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    width: 59px;
+    height: 59px;
+    background: linear-gradient(270.29deg, #FEC11B 2.89%, #FFD221 73.63%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Поверх круга – сама иконка */
+.iconWrapper :global(img) {
+    position: relative;
+    z-index: 1;
+    width: 85px;
+    height: 85px;
+}

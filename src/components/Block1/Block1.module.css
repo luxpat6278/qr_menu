@@ -1,0 +1,213 @@
+/* ====== ОСНОВНЫЕ СЕКЦИИ ====== */
+
+.promo-section {
+  position: relative;
+  padding: 4rem 2rem;
+  font-size: 24px;
+
+  font-weight: 400;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.text-content {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.title {
+  font-size: 128px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: #1e3a8a;
+  width: 610px;
+  margin: 0;
+  line-height: 1.1;
+  margin-top: 240px;
+  background: linear-gradient(135deg, #2B79FF, #0014c6, #2b79ff);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 15s ease-in-out infinite;
+  font-family: var(--font-bebas), sans-serif;
+
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin-top: 21px;
+  color: #1e3a8a;
+
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 1rem 0 0;
+  font-size: 24px;
+  color: #001460;
+}
+
+.description {
+  margin-top: 64px;
+  font-size: 24px;
+  color: #000a61;
+  line-height: 1;
+  width: 540px;
+}
+
+.try-button {
+  display: inline-block;
+  margin-top: 63px;
+  padding: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  background: linear-gradient(90deg, #2B79FF, #0014C6);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0px 11px 20.1px 0px rgba(0, 85, 232, 0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 357px;
+  height: 94px;
+
+}
+
+.try-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 20, 198, 0.4);
+}
+
+
+/* ========= ИЗОБРАЖЕНИЯ ========= */
+
+.image-content {
+  display: flex;
+}
+
+.yellow-image {
+  position: absolute;
+  top: -70px;
+  left: 80%;
+  transform: translateX(-55%);
+  z-index: 1;
+  width: 800px;
+  height: 1215px;
+}
+
+.yellow-image-mobile {
+  display: none;
+}
+
+.phone-image {
+  position: absolute;
+  left: 80%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0;
+  animation: slideInUp 1.2s ease-out 0.3s forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(60px) translateX(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(-335px) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+
+/* ========= АДАПТИВ ======== */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    display: contents;
+    /* Использовать осторожно */
+  }
+
+  .title {
+    font-size: 2.2rem;
+    order: 1;
+  }
+
+  .benefits {
+    order: 2;
+  }
+
+  .image-content {
+    order: 3;
+  }
+
+  .description {
+    font-size: 1rem;
+    order: 4;
+    width: 100%;
+  }
+
+  .try-button {
+    width: 100%;
+    font-size: 1.05rem;
+    order: 5;
+  }
+
+  .yellow-image-mobile {
+    display: block;
+    position: absolute;
+    top: -130px;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 1000px;
+    z-index: 1;
+  }
+
+  .yellow-image {
+    display: none;
+  }
+
+  .phone-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: auto;
+    opacity: 0;
+    animation: slideInUp 1.2s ease-out 0.3s forwards;
+  }
+}

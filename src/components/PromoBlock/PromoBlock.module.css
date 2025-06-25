@@ -1,0 +1,108 @@
+.promoContainer {
+    width: 1415px;
+    height: 740px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
+    margin: 190px auto 190px;
+    border-radius: 35px;
+}
+
+.leftSide {
+    width: 50%;
+    background: linear-gradient(to bottom right, rgba(43, 121, 255, 1), rgba(0, 20, 198, 1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 35px 0px 0px 35px;
+    z-index: -1;
+}
+
+.robotImage {
+    object-fit: contain;
+    width: 585px;
+    height: 585px;
+    height: auto;
+}
+
+.rightSide {
+    width: 50%;
+    background-color: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 900px;
+    height: 740px;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.title {
+    font-family: var(--font-bebas);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: linear-gradient(90deg, #2B79FF 0%, #0014C6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 40px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input {
+    padding: 18px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(242, 242, 242, 1);
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+.button {
+    padding: 30px 50px;
+    background: linear-gradient(90deg, #2B79FF 0%, #0014C6 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 11px 20.1px 0px rgba(0, 85, 232, 0.35);
+    font-family: var(--font-inter);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    width: 254px;
+    margin-top: 45px;
+
+
+}
+
+.button:hover {
+    background-color: #1e40af;
+}

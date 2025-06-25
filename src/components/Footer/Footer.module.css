@@ -1,0 +1,87 @@
+.footer {
+    background: linear-gradient(90deg, #2B79FF 0%, #0014C6 100%);
+    color: white;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.name {
+    font-family: var(--font-bebas);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.resident {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    /* убираем отступ снизу/сверху */
+}
+
+.right {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.symbol {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.name span {
+    font-weight: 800;
+}
+
+.resident {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.right {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.right a {
+    text-decoration: underline;
+    color: white;
+}
