@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import phoneImg from '../../../public/iPhone_13.svg';
-import styles from './Advantages.module.css';
+import styles from '@/components/landing/Advantages/Advantages.module.css';
 
 const leftItems = [
   { title: 'Интеграции', text: 'Готовность к подключению онлайн-оплаты, CRM, доставки и аналитики.' },
@@ -18,10 +17,10 @@ const rightItems = [
 
 export default function Advantages() {
   return (
-    <section className={styles.wrapper} id = 'advantages'>
+    <section className={styles.wrapper} id="advantages">
       <h2 className={styles.title}>ПРЕИМУЩЕСТВА</h2>
       <div className={styles.content}>
-        {/* Левая колонка: текст слева, иконка справа */}   
+        {/* Левая колонка: текст слева, иконка справа */}
         <div className={styles.column}>
           {leftItems.map((item, idx) => (
             <div key={idx} className={styles.item}>
@@ -37,7 +36,7 @@ export default function Advantages() {
         {/* Центр: телефон */}
         <div className={styles.imageWrapper}>
           <Image
-            src={phoneImg}
+            src="/iPhone_13.svg" // путь к файлу из public/
             alt="Phone app preview"
             width={740}
             height={660}
@@ -51,7 +50,7 @@ export default function Advantages() {
             <div key={idx} className={styles.item}>
               <div className={`${styles.icon} ${styles.blue}`} />
               <div className={styles.column_text}>
-                <h3>{item.title}</h3>   
+                <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
             </div>

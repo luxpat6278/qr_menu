@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./PromoBlock.module.css";
+import styles from "@/components/landing/PromoBlock/PromoBlock.module.css";
 
 const PromoBlock = () => {
   return (

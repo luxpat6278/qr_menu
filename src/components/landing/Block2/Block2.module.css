@@ -11,7 +11,6 @@
     margin: 0 auto;
 }
 
-/* Колонки занимают по 50% (с запасом на отступы) */
 .left,
 .right {
     min-width: 300px;
@@ -19,7 +18,6 @@
 
 }
 
-/* 2. Blob — центрируем внутри .left и уменьшаем размер */
 .blob {
     position: absolute;
     left: 60%;
@@ -29,17 +27,14 @@
     z-index: -1;
 }
 
-/* 3. Робот тоже по центру, чуть «выше» середины */
 .robot {
     position: absolute;
     left: -0%;
     top: -10px;
-    max-width: 500px;
     width: 600px;
     z-index: 2;
 }
 
-/* 4. Пузырьки с едой — расставляем относительно .left в процентах */
 .foodBubbleLarge {
     position: absolute;
     bottom: -120px;
@@ -149,5 +144,44 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .right {
+    text-align: center;
+    
+  }
+  .ribbon{
+    transform: translate(10%, -650%);
+  }
+  .bulletList{
+    width: 282px;
+    margin-left: auto;
+    margin-right: auto;
+        align-items: flex-start;
+    
+  }
+  .blob{
+    transform: translate(-140%, -65%);
+    width: 335px;
+    height: 368px;
+  }
+
+  .robot{
+    width: 372px;
+    height: 372px;
+    transform: translatey(-10%);
+
   }
 }

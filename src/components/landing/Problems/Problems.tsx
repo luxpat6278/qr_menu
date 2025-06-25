@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './Problems.module.css';
+import styles from '@/components/landing/Problems/Problems.module.css';
 import Image from 'next/image';
 
 const problems = [

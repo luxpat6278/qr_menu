@@ -264,7 +264,9 @@ box-shadow:
     flex-direction: column;
     align-items: center;
   }
-
+.container{
+  margin-top: 190px;
+}
   .card {
     transform: translateX(-50%) scale(0.95);
   }

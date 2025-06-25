@@ -1,17 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import styles from './HowItWorks.module.css';
-
-import Qr from '../../../public/howitworksimg/Mask_group.svg';
-import Basket from '../../../public/howitworksimg/Mask_group_(1).svg';
-import Ai from '../../../public/howitworksimg/Mask_group_(2).svg';
-import Robot from '../../../public/howitworksimg/Mask_group_(3).svg';
+import Image from 'next/image';
+import styles from '@/components/landing/HowItWorks/HowItWorks.module.css';
 
 interface Step {
   id: number;
-  icon: StaticImageData;
+  icon: string;
   title: string;
   text: string;
 }
@@ -19,25 +14,25 @@ interface Step {
 const steps: Step[] = [
   {
     id: 1,
-    icon: Qr,
+    icon: '/howitworksimg/Mask_group.svg',
     title: 'СКАНИРОВАНИЕ QR–КОДА',
     text: 'Клиент сканирует QR-код и открывает меню на своём устройстве',
   },
   {
     id: 2,
-    icon: Basket,
+    icon: '/howitworksimg/Mask_group_(1).svg',
     title: 'ВЫБОР БЛЮД',
     text: 'Клиент выбирает понравившиеся позиции, добавляя их в корзину',
   },
   {
     id: 3,
-    icon: Ai,
+    icon: '/howitworksimg/Mask_group_(2).svg',
     title: 'ДОПОЛНЕНИЕ ЗАКАЗА',
     text: 'Искусственный интеллект предлагает позиции на основе выбора клиента ',
   },
   {
     id: 4,
-    icon: Robot,
+    icon: '/howitworksimg/Mask_group_(3).svg',
     title: 'ПОКАЗ ОФИЦИАНТУ',
     text: 'При нажатии «Показать официанту» официант получает копию заказа',
   },
@@ -52,7 +47,7 @@ export default function HowItWorks() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setShow(true);
-          observer.unobserve(entry.target); // отключаем после первого показа
+          observer.unobserve(entry.target);
         }
       },
       { threshold: 0.2 }

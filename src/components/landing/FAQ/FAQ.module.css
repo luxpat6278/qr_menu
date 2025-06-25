@@ -2,21 +2,28 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 100px 0 100px 40px;
+  padding: 100px 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; /* центрирует по горизонтали */
+  align-items: center;     /* центрирует по вертикали */
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  width: 1400px;
 }
 
 
 .bgImage {
   position: absolute;
-  z-index: -1;
-  width: 1913px;
   top: 0;
   left: 0;
-  object-fit: cover;
+  z-index: 0;
 }
+
+
+
 
 .cardimage {
   position: absolute;

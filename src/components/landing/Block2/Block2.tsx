@@ -1,15 +1,8 @@
-// components/HeroSection.tsx
 'use client';
 
 import React, { useState, useRef, useEffect, FC, MouseEvent, CSSProperties } from 'react';
 import Image from 'next/image';
-import styles from '@/components/Block2/Block2.module.css';
-import robot from '../../../public/Block2img/robot.png';
-import blob_blue from '../../../public/Block2img/Rectangle_9.png';
-import burger from '../../../public/Block2img/Rectangle.png';
-import pizza from '../../../public/Block2img/Rectangle_(1).png';
-import broccoli from '../../../public/Block2img/Rectangle_(2).png';
-import union from '../../../public/Block2img/Union.png';
+import styles from '@/components/landing/Block2/Block2.module.css';
 
 interface Offset { x: number; y: number; }
 type LayerKey = 'large' | 'medium' | 'outline' | 'robot' | 'text';
@@ -26,7 +19,6 @@ const HeroSection: FC = () => {
   const [offset, setOffset] = useState<Offset>({ x: 0, y: 0 });
   const [visible, setVisible] = useState<Record<string, boolean>>({});
 
-  // refs для тех, кто анимируется
   const robotRef = useRef<HTMLDivElement>(null);
   const largeRef = useRef<HTMLDivElement>(null);
   const mediumRef = useRef<HTMLDivElement>(null);
@@ -89,23 +81,23 @@ const HeroSection: FC = () => {
       <div className={styles.container}>
         <div className={styles.left}>
           <div>
-            <Image src={blob_blue} alt="blob" className={styles.blob} />
+            <Image src="/Block2img/blue_blob.png" alt="blob" className={styles.blob} width={600} height={600} />
           </div>
 
           <div ref={robotRef} data-id="robot" style={textStyle}>
-            <Image src={robot} alt="Дружелюбный робот" className={styles.robot} />
+            <Image src="/Block2img/robot.png" alt="Дружелюбный робот" className={styles.robot} width={600} height={600}/>
           </div>
 
           <div ref={largeRef} data-id="large" className={styles.foodBubbleLarge} style={getStyle('large')}>
-            <Image src={burger} alt="Бургер" fill sizes="230px" />
+            <Image src="/Block2img/burger.png" alt="Бургер" fill sizes="230px" />
           </div>
 
           <div ref={mediumRef} data-id="medium" className={styles.foodBubbleMedium} style={getStyle('medium')}>
-            <Image src={pizza} alt="Пицца" fill sizes="160px" />
+            <Image src="/Block2img/pizza.png" alt="Пицца" fill sizes="160px" />
           </div>
 
           <div ref={outlineRef} data-id="outline" className={styles.outlineSquare} style={getStyle('outline', 'rotate(8deg)')}>
-            <Image src={broccoli} alt="Брокколи" fill sizes="140px" />
+            <Image src="/Block2img/broccoli.png" alt="Брокколи" fill sizes="140px" />
           </div>
         </div>
         <div ref={textRef} data-id="text" className={styles.right} style={textStyle}>
@@ -119,7 +111,7 @@ const HeroSection: FC = () => {
           </ul>
           <div className={styles.ribbon}>
             Впервые в Казахстане
-            <Image src={union} alt="underline" className={styles.ribbonUnderline} priority />
+            <Image src="/Block2img/union.png" alt="underline" className={styles.ribbonUnderline} width={200} height={30} priority />
           </div>
         </div>
       </div>

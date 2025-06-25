@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import styles from './OptionBlock.module.css';
+import styles from '@/components/landing/option/OptionBlock.module.css';
 
 interface CardProps {
   value: string;

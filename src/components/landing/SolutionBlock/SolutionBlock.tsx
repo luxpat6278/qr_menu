@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import styles from './SolutionBlock.module.css';
+import styles from '@/components/landing/SolutionBlock/SolutionBlock.module.css';
 
 export default function SolutionBlock() {
   return (
